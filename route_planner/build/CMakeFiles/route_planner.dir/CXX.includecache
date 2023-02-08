@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/workspace/cplusplus_nanodegree/route_planner/src/model.h
+vector
+-
+unordered_map
+-
+string
+-
+cstddef
+-
+
+/home/workspace/cplusplus_nanodegree/route_planner/src/route_model.h
+limits
+-
+cmath
+-
+unordered_map
+-
+model.h
+/home/workspace/cplusplus_nanodegree/route_planner/src/model.h
+iostream
+-
+
+/home/workspace/cplusplus_nanodegree/route_planner/src/route_planner.cpp
+route_planner.h
+/home/workspace/cplusplus_nanodegree/route_planner/src/route_planner.h
+algorithm
+-
+
+/home/workspace/cplusplus_nanodegree/route_planner/src/route_planner.h
+iostream
+-
+vector
+-
+string
+-
+route_model.h
+/home/workspace/cplusplus_nanodegree/route_planner/src/route_model.h
+
