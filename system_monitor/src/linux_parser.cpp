@@ -28,11 +28,13 @@ string LinuxParser::OperatingSystem() {
       while (linestream >> key >> value) {
         if (key == "PRETTY_NAME") {
           std::replace(value.begin(), value.end(), '_', ' ');
+          filestream.close();
           return value;
         }
       }
     }
   }
+  filestream.close();
   return value;
 }
 
@@ -118,7 +120,7 @@ long LinuxParser::Jiffies() {
       std::istringstream linestream(line);
       while (linestream >> key) {
         if (key == "cpu") {
-          linestream >> key >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
+          linestream >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
         }
       }
     }
@@ -137,7 +139,7 @@ long LinuxParser::ActiveJiffies() {
       std::istringstream linestream(line);
       while (linestream >> key) {
         if (key == "cpu") {
-          linestream >> key >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
+          linestream >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
         }
       }
     }
@@ -155,7 +157,7 @@ long LinuxParser::IdleJiffies() {
       std::istringstream linestream(line);
       while (linestream >> key) {
         if (key == "cpu") {
-          linestream >> key >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
+          linestream >> user >> nice >> system >> idle >> iowait >> irq >> softirq >>  steal >> guest >> guest_nice;
         }
       }
     }

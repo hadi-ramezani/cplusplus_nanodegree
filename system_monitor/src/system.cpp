@@ -15,9 +15,6 @@ using std::set;
 using std::size_t;
 using std::string;
 using std::vector;
-/*You need to complete the mentioned TODOs in order to satisfy the rubric criteria "The student will be able to extract and display basic data about the system."
-
-You need to properly format the uptime. Refer to the comments mentioned in format. cpp for formatting the uptime.*/
 
 // Return the system's CPU
 Processor& System::Cpu() { 
@@ -32,18 +29,7 @@ vector<Process>& System::Processes() {
         process.SetPid(id);
         processes_.push_back(process);
     }
-    // std::cout << "Before\n"; 
-    // // sort the processes
-    // for (auto p: processes_){
-    //     std::cout << p.Pid() << "\n";
-    // }
     std::sort(processes_.begin(), processes_.end());
-    // std::cout << "After\n"; 
-    // // sort the processes
-    // for (auto p: processes_){
-    //     std::cout << p.Pid() << "\n";
-    // }
-    // exit(1);
 
     return processes_; 
 

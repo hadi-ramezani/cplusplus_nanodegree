@@ -32,8 +32,8 @@ float Process::CpuUtilization() {
     starttime = std::stol(tokens[21]);
     total_time = utime + stime + cutime + cstime;
     
-    seconds = uptime - (starttime/ sysconf(_SC_CLK_TCK));
-    cpu_usage = 100.0 * total_time / sysconf(_SC_CLK_TCK)/seconds; 
+    seconds = uptime - (starttime / sysconf(_SC_CLK_TCK));
+    cpu_usage = 1.0 * total_time / sysconf(_SC_CLK_TCK) / seconds; 
     return cpu_usage; 
 }
 
@@ -47,7 +47,7 @@ string Process::Ram() const { return LinuxParser::Ram(Pid()); }
 string Process::User() { return LinuxParser::User(Pid()); }
 
 // Return the age of this process (in seconds)
-long int Process::UpTime() { return LinuxParser::UpTime(Pid()); }
+long int Process::UpTime() { return LinuxParser::UpTime() - LinuxParser::UpTime(Pid()); }
 
 
 // Overload the "less than" comparison operator for Process objects
