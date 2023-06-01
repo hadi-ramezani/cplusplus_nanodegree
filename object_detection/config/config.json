@@ -1,6 +1,6 @@
 {
-    "model_path": "<path to the project folder>/resources/frozen_inference_graph.pb",
-    "metadata_path": "<path to the project folder>/resources/ssd_mobilenet_v2_coco_2018_03_29.pbtxt.txt",
-    "classes_path": "<path to the project folder>/resources/object_detection_classes_coco.txt",
+    "model_path": "/home/workspace/cplusplus_nanodegree/object_detection/resources/frozen_inference_graph.pb",
+    "metadata_path": "/home/workspace/cplusplus_nanodegree/object_detection/resources/ssd_mobilenet_v2_coco_2018_03_29.pbtxt.txt",
+    "classes_path": "/home/workspace/cplusplus_nanodegree/object_detection/resources/object_detection_classes_coco.txt",
     "min_confidence_score": 0.5
 }

@@ -2,6 +2,9 @@
 #define IMAGE_CAPTURE_H
 
 #include <thread>
+#include <atomic>
+#include <mutex>
+#include <condition_variable>
 #include "opencv2/opencv.hpp"
 
 class ImageCapture {
